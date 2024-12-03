@@ -61,11 +61,6 @@ in {
   };
 
   config = mkIf cfg.enable {
-    assertions = [
-      (lib.hm.assertions.assertPlatform "programs.librewolf" pkgs
-        lib.platforms.linux)
-    ];
-
     home.file.".librewolf/librewolf.overrides.cfg" =
       lib.mkIf (cfg.settings != { }) { text = mkOverridesFile cfg.settings; };
   };
