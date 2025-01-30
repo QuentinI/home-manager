@@ -42,6 +42,7 @@ let
     ./misc/uninstall.nix
     ./misc/version.nix
     ./misc/vte.nix
+    ./misc/xdg-autostart.nix
     ./misc/xdg-desktop-entries.nix
     ./misc/xdg-mime-apps.nix
     ./misc/xdg-mime.nix
@@ -52,6 +53,7 @@ let
     ./misc/xfconf.nix
     ./programs/abook.nix
     ./programs/aerc.nix
+    ./programs/aerospace.nix
     ./programs/afew.nix
     ./programs/alacritty.nix
     ./programs/alot.nix
@@ -77,6 +79,7 @@ let
     ./programs/bun.nix
     ./programs/carapace.nix
     ./programs/cava.nix
+    ./programs/cavalier.nix
     ./programs/chromium.nix
     ./programs/cmus.nix
     ./programs/command-not-found/command-not-found.nix
@@ -103,6 +106,7 @@ let
     ./programs/getmail.nix
     ./programs/gh.nix
     ./programs/gh-dash.nix
+    ./programs/ghostty.nix
     ./programs/git-cliff.nix
     ./programs/git-credential-oauth.nix
     ./programs/git.nix
@@ -191,6 +195,7 @@ let
     ./programs/pandoc.nix
     ./programs/papis.nix
     ./programs/password-store.nix
+    ./programs/pay-respects.nix
     ./programs/pazi.nix
     ./programs/pet.nix
     ./programs/pidgin.nix
@@ -243,6 +248,7 @@ let
     ./programs/tmate.nix
     ./programs/tmux.nix
     ./programs/tofi.nix
+    ./programs/todoman.nix
     ./programs/topgrade.nix
     ./programs/translate-shell.nix
     ./programs/urxvt.nix
@@ -326,6 +332,7 @@ let
     ./services/keybase.nix
     ./services/keynav.nix
     ./services/lieer.nix
+    ./services/linux-wallpaperengine.nix
     ./services/listenbrainz-mpd.nix
     ./services/lorri.nix
     ./services/mako.nix
@@ -342,6 +349,7 @@ let
     ./services/nextcloud-client.nix
     ./services/nix-gc.nix
     ./services/notify-osd.nix
+    ./services/ollama.nix
     ./services/opensnitch-ui.nix
     ./services/osmscout-server.nix
     ./services/owncloud-client.nix
@@ -402,6 +410,7 @@ let
     ./services/window-managers/i3-sway/swaynag.nix
     ./services/window-managers/river.nix
     ./services/window-managers/spectrwm.nix
+    ./services/window-managers/wayfire.nix
     ./services/window-managers/xmonad.nix
     ./services/wlsunset.nix
     ./services/wob.nix
@@ -414,6 +423,7 @@ let
     ./systemd.nix
     ./targets/darwin
     ./targets/generic-linux.nix
+    ./wayland.nix
     ./xresources.nix
     ./xsession.nix
     ./misc/nix.nix

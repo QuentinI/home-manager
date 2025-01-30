@@ -79,9 +79,11 @@ in import nmtSrc {
     ./modules/programs/gallery-dl
     ./modules/programs/gh
     ./modules/programs/gh-dash
+    ./modules/programs/ghostty
     ./modules/programs/git
     ./modules/programs/git-cliff
     ./modules/programs/git-credential-oauth
+    ./modules/programs/go
     ./modules/programs/gpg
     ./modules/programs/gradle
     ./modules/programs/granted
@@ -101,6 +103,7 @@ in import nmtSrc {
     ./modules/programs/kubecolor
     ./modules/programs/ledger
     ./modules/programs/less
+    ./modules/programs/lesspipe
     ./modules/programs/lf
     ./modules/programs/lsd
     ./modules/programs/lieer
@@ -126,6 +129,7 @@ in import nmtSrc {
     ./modules/programs/openstackclient
     ./modules/programs/pandoc
     ./modules/programs/papis
+    ./modules/programs/pay-respects
     ./modules/programs/pet
     ./modules/programs/pistol
     ./modules/programs/pls
@@ -155,6 +159,7 @@ in import nmtSrc {
     ./modules/programs/tealdeer
     ./modules/programs/texlive
     ./modules/programs/thefuck
+    ./modules/programs/thunderbird
     ./modules/programs/tmate
     ./modules/programs/tmux
     ./modules/programs/topgrade
@@ -175,11 +180,13 @@ in import nmtSrc {
     ./modules/xresources
   ] ++ lib.optionals isDarwin [
     ./modules/launchd
+    ./modules/programs/aerospace
     ./modules/services/emacs-darwin
     ./modules/services/espanso-darwin
     ./modules/services/git-sync-darwin
     ./modules/services/imapnotify-darwin
     ./modules/services/nix-gc-darwin
+    ./modules/services/ollama/darwin
     ./modules/targets-darwin
   ] ++ lib.optionals isLinux [
     ./modules/config/i18n
@@ -198,6 +205,7 @@ in import nmtSrc {
     ./modules/programs/beets # One test relies on services.mpd
     ./modules/programs/bemenu
     ./modules/programs/boxxy
+    ./modules/programs/cavalier
     ./modules/programs/firefox/firefox.nix
     ./modules/programs/firefox/floorp.nix
     ./modules/programs/foot
@@ -222,7 +230,6 @@ in import nmtSrc {
     ./modules/programs/swaylock
     ./modules/programs/swayr
     ./modules/programs/terminator
-    ./modules/programs/thunderbird
     ./modules/programs/tofi
     ./modules/programs/waybar
     ./modules/programs/wlogout
@@ -240,6 +247,7 @@ in import nmtSrc {
     ./modules/services/cliphist
     ./modules/services/clipman
     ./modules/services/comodoro
+    ./modules/services/copyq
     ./modules/services/conky
     ./modules/services/darkman
     ./modules/services/devilspie2
@@ -259,11 +267,13 @@ in import nmtSrc {
     ./modules/services/imapnotify
     ./modules/services/kanshi
     ./modules/services/lieer
+    ./modules/services/linux-wallpaperengine
     ./modules/services/mopidy
     ./modules/services/mpd
     ./modules/services/mpd-mpris
     ./modules/services/mpdris2
     ./modules/services/nix-gc
+    ./modules/services/ollama/linux
     ./modules/services/osmscout-server
     ./modules/services/pantalaimon
     ./modules/services/parcellite
@@ -297,6 +307,7 @@ in import nmtSrc {
     ./modules/services/window-managers/river
     ./modules/services/window-managers/spectrwm
     ./modules/services/window-managers/sway
+    ./modules/services/window-managers/wayfire
     ./modules/services/wlsunset
     ./modules/services/wob
     ./modules/services/xsettingsd

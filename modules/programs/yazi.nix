@@ -18,14 +18,12 @@ let
   '';
 
   fishIntegration = ''
-    function ${cfg.shellWrapperName}
-      set tmp (mktemp -t "yazi-cwd.XXXXX")
-      yazi $argv --cwd-file="$tmp"
-      if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-        builtin cd -- "$cwd"
-      end
-      rm -f -- "$tmp"
+    set -l tmp (mktemp -t "yazi-cwd.XXXXX")
+    command yazi $argv --cwd-file="$tmp"
+    if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+      builtin cd -- "$cwd"
     end
+    rm -f -- "$tmp"
   '';
 
   nushellIntegration = ''
@@ -109,7 +107,7 @@ in {
           };
           manager = {
             show_hidden = false;
-            sort_by = "modified";
+            sort_by = "mtime";
             sort_dir_first = true;
             sort_reverse = true;
           };
@@ -134,7 +132,7 @@ in {
               { fg = "#7AD9E5"; mime = "image/*"; }
               { fg = "#F3D398"; mime = "video/*"; }
               { fg = "#F3D398"; mime = "audio/*"; }
-              { fg = "#CD9EFC"; mime = "application/x-bzip"; }
+              { fg = "#CD9EFC"; mime = "application/bzip"; }
             ];
           };
         }
@@ -202,7 +200,7 @@ in {
 
     programs.zsh.initExtra = mkIf cfg.enableZshIntegration bashIntegration;
 
-    programs.fish.interactiveShellInit =
+    programs.fish.functions.${cfg.shellWrapperName} =
       mkIf cfg.enableFishIntegration fishIntegration;
 
     programs.nushell.extraConfig =
